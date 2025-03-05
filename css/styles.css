@@ -12,17 +12,16 @@ body {
 
 header {
     background: url('/img/Laura.jpg') no-repeat center center;
-    background-size: contain; /* Ajusta la imagen completa sin recortarla */
+    background-size: cover; /* Mantener la cobertura completa de la imagen */
     background-position: center;
-    background-attachment: fixed; /* Para que se mantenga fija en el scroll (opcional) */
-    background-color: black; /* Color de fondo por si la imagen no cubre toda la pantalla */
+    background-attachment: fixed;
     color: white;
     padding: 50px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    height: 100vh; /* Ajusta a la altura de la pantalla */
+    height: 100vh;
 }
 
 .bg-image {
@@ -239,8 +238,8 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* Reducido para que en pantallas pequeñas se vea mejor */
-    padding: 20px;
+    gap: 60px; /* Espaciado entre los iconos */
+    padding: 40px; /* Aumenta el espacio interno del contenedor */
     background-color: #292626;
     border-radius: 10px;
     max-width: 2500px;
@@ -251,11 +250,13 @@ p {
     width: 80px;
     height: auto;
     transition: transform 0.3s ease;
+    padding: 15px; /* Espacio alrededor de cada icono */
 }
 
 .habilidades-container img:hover {
     transform: scale(1.2);
 }
+
 
 .aclaracion {
     text-align: center;
@@ -565,5 +566,22 @@ p {
 
     .contacto a {
         font-size: 14px; /* Reducir más el tamaño de fuente */
+    }
+    @media (max-width: 768px) { /* Tablets y dispositivos con pantallas medianas */
+        header {
+            background-size: cover; /* La imagen sigue cubriendo toda la sección */
+            background-attachment: scroll; /* La imagen ya no se queda fija, mejora en móviles */
+            padding: 40px 20px; /* Reduce el padding para adaptarse mejor */
+        }
+    }
+    
+    @media (max-width: 480px) { /* Dispositivos móviles */
+        header {
+            background-size: cover; /* Sigue cubriendo la pantalla */
+            background-attachment: scroll; /* Mejora el rendimiento en móviles */
+            padding: 30px 10px; /* Menos padding en móviles */
+            height: auto; /* Permite que la altura se ajuste automáticamente */
+            min-height: 100vh; /* Garantiza que siempre ocupe al menos el 100% de la pantalla */
+        }
     }
 }
