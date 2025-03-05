@@ -1,0 +1,555 @@
+/* ====== Estilos Generales ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: url('/img/Laura.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 100vh;
+}
+
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.nav-menu {
+    width: 200px;
+    background: #444;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 100;
+    padding-left: 20px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #555;
+    list-style: none;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.nav-menu.show {
+    height: 240px;
+}
+
+
+section {
+    padding: 30px 20px;
+    text-align: left;
+    margin-left: 60px;
+}
+
+section h2 {
+    position: relative;
+    top: -100px;
+}
+
+section h2, section p {
+    margin-left: 100px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+h1 {
+    text-align: center;
+    margin-left: 20px;
+}
+
+section h6 {
+    position: relative;
+    top: -90px;
+    margin-left: 100px;
+}
+
+p {
+    text-align: left;
+    margin-left: 20px;
+    flex: 2;
+    padding-left: 20px;
+}
+
+.contenido-inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 20px;
+}
+
+.carrusel {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto {
+    flex: 5;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.carrusel-container {
+    position: relative;
+    width: 50%;
+}
+
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.puntos {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 10;
+}
+
+.punto {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.punto.active {
+    background-color: white;
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.flecha.izquierda {
+    left: 10px;
+}
+
+.flecha.derecha {
+    right: 10px;
+}
+
+.texto {
+    width: 45%;
+    padding: 20px;
+}
+
+.texto p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#habilidades {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.habilidades-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 80px;
+    justify-items: center;
+    padding: 20px;
+    background-color: #292626;
+    border-radius: 10px;
+    max-width: 2500px;
+    margin: 0 auto;
+}
+
+.habilidades-container img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.habilidades-container img:hover {
+    transform: scale(1.2);
+}
+
+.aclaracion {
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+    color: #858282;
+}
+
+.github-link {
+    display: inline-block;
+    background-color: #24292e;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.github-link:hover {
+    background-color: #444;
+}
+
+#tutoriales, #proyectos {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.proyectos-container, .tutoriales-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.proyecto, .tutorial {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    min-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.proyecto h3, .tutorial h3 {
+    color: #333;
+}
+
+.proyecto p, .tutorial p {
+    flex-grow: 1;
+    text-align: justify;
+}
+
+/* Botones comunes */
+.descargar-btn, .github-link, .tutorial-link, .readme-link, .descargar-btn-lila {
+    display: inline-block;
+    margin: 10px auto;  /* Centra los botones */
+    padding: 12px 20px; /* Ajusta el padding para que los botones sean consistentes */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 100%;  /* Los botones se ajustarán al 100% del ancho del contenedor */
+    max-width: 280px;  /* Limita el tamaño máximo del botón */
+    min-width: 150px;  /* Asegura que no se hagan demasiado pequeños */
+    box-sizing: border-box;  /* Para incluir el padding y border en el tamaño total */
+    text-align: center;  /* Asegura que el texto se centre */
+}
+
+/* Botón rosa */
+.descargar-btn {
+    background-color: #ff61ea;
+    color: white;
+}
+
+.descargar-btn:hover {
+    background-color: #d94dbb;
+}
+
+/* Otros botones */
+.github-link {
+    background-color: #d475fa;
+    color: white;
+}
+
+.github-link:hover {
+    background-color: #8e52cc;
+}
+
+.readme-link, .tutorial-link {
+    background-color: #000000;
+    color: white;
+}
+
+.readme-link:hover, .tutorial-link:hover {
+    background-color: #8e52cc;
+}
+
+/* Contenedor de los botones */
+.proyecto, .tutorial, #curriculum {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    min-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centra los elementos dentro del contenedor */
+    justify-content: center; /* Asegura que los botones estén centrados verticalmente */
+    text-align: center; /* Asegura que el texto de los botones esté centrado */
+    margin-bottom: 20px; /* Añade espacio entre los contenedores */
+}
+
+/* Aclaración de estilo */
+.aclaracion {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilos para el curriculum */
+#curriculum {
+    text-align: center;
+    padding: 50px 20px;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    display: flex; /* Flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 200px; /* Puedes ajustar esta altura para el curriculum */
+    width: 100%;  /* Asegurando que el elemento ocupe todo el ancho disponible */
+    margin: 0 auto;  /* Centra el contenedor */
+}
+
+.cv-container {
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;  /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centra el contenido dentro de #curriculum */
+}
+
+
+/* Botones de descarga del curriculum */
+.descargar-btn, .descargar-btn-lila {
+    display: inline-block; /* Permite que el botón tome el tamaño del contenido */
+    margin: 10px auto;
+    padding: 12px 20px; /* Define el espacio interno en lugar de un ancho fijo */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.3s;
+    white-space: nowrap; /* Evita que el texto del botón se divida en varias líneas */
+}
+
+.descargar-btn {
+    background-color: #ff61ea;
+    color: white;
+}
+
+.descargar-btn:hover {
+    background-color: #d94dbb;
+}
+
+.descargar-btn-lila {
+    background-color: #d475fa;
+    color: white;
+}
+
+.descargar-btn-lila:hover {
+    background-color: #8e52cc;
+}
+
+
+/* Estilos para la sección de contacto */
+#contacto {
+    text-align: center;
+    padding: 50px 20px;
+    color: rgb(0, 0, 0);
+}
+
+.contacto p {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.contacto a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.contacto a:hover {
+    color: #8f1b8f;
+}
+
+.icono {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    /* Aseguramos que todo el contenido se apile verticalmente */
+    .contenido-inicio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Ajustamos el tamaño de los elementos de carrusel y texto */
+    .carrusel-container, .texto {
+        width: 100%;
+    }
+
+    /* Cambiamos el diseño de las habilidades a 2 columnas */
+    .habilidades-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    /* Aseguramos que el menú ocupe todo el ancho */
+    .nav-menu {
+        width: 100%;
+    }
+
+    /* Proyecto y tutorial ajustados al 90% del ancho */
+    .proyecto, .tutorial {
+        width: 90%;
+    }
+
+    /* Ajustar tamaño de todos los botones en dispositivos móviles */
+    .descargar-btn, .github-link, .tutorial-link, .readme-link, .descargar-btn-lila {
+        width: 100%;  /* Los botones ocupan el 100% del ancho */
+        max-width: 280px; /* Mantiene el máximo tamaño */
+        padding: 12px 20px; /* Mantiene el padding consistente */
+        font-size: 16px; /* Asegura el mismo tamaño de fuente */
+        margin: 10px auto; /* Centra los botones */
+    }
+
+    /* Ajuste de contenedores en pantallas pequeñas */
+    #curriculum, .cv-container {
+        width: 100%;  /* Los contenedores ocupan todo el ancho */
+        max-width: 350px; /* Limita el tamaño máximo */
+        padding: 20px;
+        margin: 10px auto; /* Centra el contenedor */
+    }
+
+    /* Ajuste del texto de contacto */
+    .contacto p {
+        font-size: 14px; /* Reducir el tamaño de fuente */
+        margin: 5px 10px; /* Ajustar el margen de los párrafos */
+    }
+
+    .contacto a {
+        font-size: 16px; /* Reducir el tamaño de fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Habilidades a 1 columna en pantallas muy pequeñas */
+    .habilidades-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Ajustar el tamaño del icono del menú */
+    .menu-toggle {
+        font-size: 24px;
+    }
+
+    /* Ajuste para los botones pequeños */
+    .descargar-btn, .github-link, .tutorial-link, .readme-link, .descargar-btn-lila {
+        padding: 8px 12px; /* Reducir el padding en pantallas pequeñas */
+        font-size: 14px;  /* Reducir el tamaño de fuente */
+        max-width: 100%;  /* Los botones ocupan todo el ancho disponible */
+        width: auto;  /* El ancho de los botones se ajusta a su contenido */
+    }
+
+    /* Asegurar que el contenedor del currículum no sea muy grande */
+    #curriculum, .cv-container {
+        width: 100%;  /* Contenedor ajustado al 100% del ancho */
+        max-width: 300px; /* Limita el tamaño máximo */
+        padding: 15px;
+    }
+
+    /* Ajuste del texto de contacto en pantallas muy pequeñas */
+    .contacto p {
+        font-size: 12px; /* Reducir más el tamaño de la fuente */
+        margin: 5px 8px; /* Ajustar el margen */
+    }
+
+    .contacto a {
+        font-size: 14px; /* Reducir más el tamaño de fuente */
+    }
+}
