@@ -12,14 +12,27 @@ body {
 
 header {
     background: url('/img/Laura.jpg') no-repeat center center;
-    background-size: cover;
+    background-size: contain; /* Ajusta la imagen completa sin recortarla */
+    background-position: center;
+    background-attachment: fixed; /* Para que se mantenga fija en el scroll (opcional) */
+    background-color: black; /* Color de fondo por si la imagen no cubre toda la pantalla */
     color: white;
     padding: 50px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    height: 100vh; /* Ajusta a la altura de la pantalla */
+}
+
+.bg-image {
+    width: 100%;
     height: 100vh;
+    object-fit: cover; /* Mantiene la proporción y llena el espacio sin distorsión */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Para que quede detrás del contenido */
 }
 
 
@@ -222,10 +235,11 @@ p {
 }
 
 .habilidades-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 80px;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Reducido para que en pantallas pequeñas se vea mejor */
     padding: 20px;
     background-color: #292626;
     border-radius: 10px;
