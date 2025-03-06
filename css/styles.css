@@ -540,13 +540,30 @@ p {
 
 /* Para dispositivos móviles específicamente */
 @media (max-width: 480px) {
-    .inicio p {
-        text-align: center;
-        color: white; /* Ajusta el color del texto si es necesario */
-        font-size: 18px; /* Ajusta el tamaño de la fuente si es necesario */
-        margin: 0 auto; /* Asegura que no haya márgenes extra */
+    #inicio .contenido {
+        display: flex;
+        flex-direction: column; /* Apila los elementos en columna */
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        text-align: center; /* Alinea el texto al centro */
+        width: 100%; /* Asegura que ocupe el 100% del ancho */
     }
-    
+
+    #inicio .texto {
+        width: 90%; /* Ajusta el ancho de la sección de texto para no ocupar todo el espacio */
+        max-width: 600px; /* Establece un máximo de ancho para que no se estire demasiado */
+    }
+
+    #inicio h1, #inicio p {
+        margin: 0; /* Elimina márgenes no deseados */
+        padding: 0; /* Elimina el padding extra */
+    }
+
+    #inicio p {
+        font-size: 16px; /* Ajusta el tamaño de la fuente */
+        line-height: 1.5; /* Mejora la legibilidad */
+    }
+
     header {
         background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
         background-size: cover; /* La imagen ocupará toda la pantalla */
