@@ -13,11 +13,12 @@ body {
 header {
     background: url('/img/Laura.jpg') no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
     color: white;
     padding: 50px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
     height: 100vh;
     width: 100%;
@@ -570,24 +571,25 @@ p {
     /* Ajuste para tabletas y móviles */
 @media (max-width: 1024px) {
     header {
-        background-size: contain; /* Para asegurarse de que la imagen completa se muestre */
+        background-size: cover;
         background-position: center center;
-        height: 100vh;
     }
 }
 
 @media (max-width: 768px) {
     header {
-        background-size: cover; /* Mantiene la imagen adaptada a la pantalla */
+        background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
         height: 100vh;
     }
 }
 
 @media (max-width: 480px) {
     header {
-        background-size: cover; /* Mantiene la imagen adaptada a la pantalla */
+        background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
         height: 100vh;
     }
 }
