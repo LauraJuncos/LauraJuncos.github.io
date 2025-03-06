@@ -548,6 +548,17 @@ p {
         height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
         margin: 0; /* Eliminar márgenes */
         padding: 0; /* Eliminar padding */
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        text-align: center; /* Alinea el texto en el centro */
+    }
+
+    /* Si tienes un contenedor específico de texto dentro del header */
+    header .texto {
+        color: white; /* Puedes ajustar el color del texto */
+        font-size: 24px; /* Ajusta el tamaño de la fuente según sea necesario */
+        margin: 0; /* Elimina márgenes extra si los hay */
     }
 
     /* Ajuste de imagen en habilidades para móviles */
@@ -587,6 +598,7 @@ p {
         font-size: 14px;
     }
 }
+
 
 /* Para dispositivos de hasta 768px de ancho */
 @media (max-width: 768px) {
