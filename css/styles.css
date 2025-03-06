@@ -538,7 +538,25 @@ p {
     }
 }
 
+/* Para dispositivos móviles específicamente */
 @media (max-width: 480px) {
+    header {
+        background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
+        background-size: cover; /* La imagen ocupará toda la pantalla */
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+        margin: 0; /* Eliminar márgenes */
+        padding: 0; /* Eliminar padding */
+    }
+
+    /* Ajuste de imagen en habilidades para móviles */
+    .habilidades-container img {
+        width: 50px;
+        margin: 5px;
+    }
+
+    /* Otros ajustes para móviles */
     .habilidades-container {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -568,46 +586,23 @@ p {
     .contacto a {
         font-size: 14px;
     }
-
-    /* Ajuste para móviles de la imagen de habilidades */
-    .habilidades-container img {
-        width: 50px;
-        margin: 5px;
-    }
-
-    /* Ajuste del header en dispositivos móviles */
-    header {
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-    }
-}
-
-/* Para dispositivos de tabletas y pantallas más grandes */
-@media (max-width: 1024px) {
-    header {
-        background-size: cover;
-        background-position: center center;
-    }
 }
 
 /* Para dispositivos de hasta 768px de ancho */
 @media (max-width: 768px) {
     header {
-        background-size: contain;
+        background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
+        background-size: cover; /* Imagen cubriendo toda la pantalla */
         background-position: center;
         background-repeat: no-repeat;
-        height: 100vh;
+        height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
     }
 }
 
-/* Para dispositivos móviles específicamente */
-@media (max-width: 480px) {
+/* Para dispositivos de hasta 1024px de ancho */
+@media (max-width: 1024px) {
     header {
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
+        background-size: cover;
+        background-position: center center;
     }
 }
