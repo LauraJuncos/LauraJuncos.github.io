@@ -238,19 +238,18 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 60px; /* Espaciado entre los iconos */
-    padding: 40px; /* Aumenta el espacio interno del contenedor */
+    padding: 20px;
     background-color: #292626;
     border-radius: 10px;
     max-width: 2500px;
     margin: 0 auto;
+    gap: 40px; /* Espacio entre los iconos */
 }
 
 .habilidades-container img {
-    width: 80px;
+    width: 80px; /* Tamaño base de los iconos */
     height: auto;
     transition: transform 0.3s ease;
-    padding: 15px; /* Espacio alrededor de cada icono */
 }
 
 .habilidades-container img:hover {
@@ -567,21 +566,18 @@ p {
     .contacto a {
         font-size: 14px; /* Reducir más el tamaño de fuente */
     }
-    @media (max-width: 768px) { /* Tablets y dispositivos con pantallas medianas */
-        header {
-            background-size: cover; /* La imagen sigue cubriendo toda la sección */
-            background-attachment: scroll; /* La imagen ya no se queda fija, mejora en móviles */
-            padding: 40px 20px; /* Reduce el padding para adaptarse mejor */
+    @media (max-width: 768px) {
+        .habilidades-container img {
+            width: 60px; /* Ajusta el tamaño de los iconos en tabletas */
+            margin: 10px; /* Espacio adicional para tabletas */
         }
     }
     
-    @media (max-width: 480px) { /* Dispositivos móviles */
-        header {
-            background-size: cover; /* Sigue cubriendo la pantalla */
-            background-attachment: scroll; /* Mejora el rendimiento en móviles */
-            padding: 30px 10px; /* Menos padding en móviles */
-            height: auto; /* Permite que la altura se ajuste automáticamente */
-            min-height: 100vh; /* Garantiza que siempre ocupe al menos el 100% de la pantalla */
+    /* Ajuste para móviles */
+    @media (max-width: 480px) {
+        .habilidades-container img {
+            width: 50px; /* Ajusta el tamaño de los iconos en móviles */
+            margin: 5px; /* Menos espacio en móviles */
         }
     }
 }
