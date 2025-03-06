@@ -12,9 +12,7 @@ body {
 
 header {
     background: url('/img/Laura.jpg') no-repeat center center;
-    background-size: cover; /* Mantener la cobertura completa de la imagen */
-    background-position: center;
-    background-attachment: fixed;
+    background-size: cover;
     color: white;
     padding: 50px 20px;
     display: flex;
@@ -22,16 +20,17 @@ header {
     justify-content: space-between;
     position: relative;
     height: 100vh;
+    width: 100%;
 }
 
 .bg-image {
     width: 100%;
     height: 100vh;
-    object-fit: cover; /* Mantiene la proporción y llena el espacio sin distorsión */
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Para que quede detrás del contenido */
+    z-index: -1;
 }
 
 
@@ -243,11 +242,11 @@ p {
     border-radius: 10px;
     max-width: 2500px;
     margin: 0 auto;
-    gap: 40px; /* Espacio entre los iconos */
+    gap: 40px;
 }
 
 .habilidades-container img {
-    width: 80px; /* Tamaño base de los iconos */
+    width: 80px;
     height: auto;
     transition: transform 0.3s ease;
 }
@@ -315,19 +314,19 @@ p {
 /* Botones comunes */
 .descargar-btn, .github-link, .tutorial-link, .readme-link, .descargar-btn-lila {
     display: inline-block;
-    margin: 10px auto;  /* Centra los botones */
-    padding: 12px 20px; /* Ajusta el padding para que los botones sean consistentes */
+    margin: 10px auto;
+    padding: 12px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
     font-size: 16px;
     transition: 0.3s;
-    width: 100%;  /* Los botones se ajustarán al 100% del ancho del contenedor */
-    max-width: 280px;  /* Limita el tamaño máximo del botón */
-    min-width: 150px;  /* Asegura que no se hagan demasiado pequeños */
-    box-sizing: border-box;  /* Para incluir el padding y border en el tamaño total */
-    text-align: center;  /* Asegura que el texto se centre */
+    width: 100%;
+    max-width: 280px;
+    min-width: 150px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 /* Botón rosa */
@@ -369,10 +368,10 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Centra los elementos dentro del contenedor */
-    justify-content: center; /* Asegura que los botones estén centrados verticalmente */
-    text-align: center; /* Asegura que el texto de los botones esté centrado */
-    margin-bottom: 20px; /* Añade espacio entre los contenedores */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Aclaración de estilo */
@@ -388,12 +387,12 @@ p {
     padding: 50px 20px;
     color: rgb(0, 0, 0);
     border-radius: 15px;
-    display: flex; /* Flexbox para centrar */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    min-height: 200px; /* Puedes ajustar esta altura para el curriculum */
-    width: 100%;  /* Asegurando que el elemento ocupe todo el ancho disponible */
-    margin: 0 auto;  /* Centra el contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .cv-container {
@@ -404,23 +403,23 @@ p {
     display: inline-block;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 350px;  /* Limitar el ancho máximo */
-    margin: 0 auto; /* Centra el contenido dentro de #curriculum */
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 
 /* Botones de descarga del curriculum */
 .descargar-btn, .descargar-btn-lila {
-    display: inline-block; /* Permite que el botón tome el tamaño del contenido */
+    display: inline-block;
     margin: 10px auto;
-    padding: 12px 20px; /* Define el espacio interno en lugar de un ancho fijo */
+    padding: 12px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
     font-size: 16px;
     transition: 0.3s;
-    white-space: nowrap; /* Evita que el texto del botón se divida en varias líneas */
+    white-space: nowrap;
 }
 
 .descargar-btn {
@@ -475,109 +474,121 @@ p {
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
-    /* Aseguramos que todo el contenido se apile verticalmente */
     .contenido-inicio {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-
-    /* Ajustamos el tamaño de los elementos de carrusel y texto */
     .carrusel-container, .texto {
         width: 100%;
     }
 
-    /* Cambiamos el diseño de las habilidades a 2 columnas */
     .habilidades-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
     }
 
-    /* Aseguramos que el menú ocupe todo el ancho */
     .nav-menu {
         width: 100%;
     }
 
-    /* Proyecto y tutorial ajustados al 90% del ancho */
     .proyecto, .tutorial {
         width: 90%;
     }
 
-    /* Ajustar tamaño de todos los botones en dispositivos móviles */
     .descargar-btn, .github-link, .tutorial-link, .readme-link, .descargar-btn-lila {
-        width: 100%;  /* Los botones ocupan el 100% del ancho */
-        max-width: 280px; /* Mantiene el máximo tamaño */
-        padding: 12px 20px; /* Mantiene el padding consistente */
-        font-size: 16px; /* Asegura el mismo tamaño de fuente */
-        margin: 10px auto; /* Centra los botones */
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 16px;
+        margin: 10px auto;
     }
 
     /* Ajuste de contenedores en pantallas pequeñas */
     #curriculum, .cv-container {
-        width: 100%;  /* Los contenedores ocupan todo el ancho */
-        max-width: 350px; /* Limita el tamaño máximo */
+        width: 100%;
+        max-width: 350px;
         padding: 20px;
-        margin: 10px auto; /* Centra el contenedor */
+        margin: 10px auto;
     }
 
     /* Ajuste del texto de contacto */
     .contacto p {
-        font-size: 14px; /* Reducir el tamaño de fuente */
-        margin: 5px 10px; /* Ajustar el margen de los párrafos */
+        font-size: 14px;
+        margin: 5px 10px;
     }
 
     .contacto a {
-        font-size: 16px; /* Reducir el tamaño de fuente */
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    /* Habilidades a 1 columna en pantallas muy pequeñas */
     .habilidades-container {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    /* Ajustar el tamaño del icono del menú */
     .menu-toggle {
         font-size: 24px;
     }
 
-    /* Ajuste para los botones pequeños */
     .descargar-btn, .github-link, .tutorial-link, .readme-link, .descargar-btn-lila {
-        padding: 8px 12px; /* Reducir el padding en pantallas pequeñas */
-        font-size: 14px;  /* Reducir el tamaño de fuente */
-        max-width: 100%;  /* Los botones ocupan todo el ancho disponible */
-        width: auto;  /* El ancho de los botones se ajusta a su contenido */
+        padding: 8px 12px;
+        font-size: 14px;
+        max-width: 100%;
+        width: auto;
     }
 
-    /* Asegurar que el contenedor del currículum no sea muy grande */
     #curriculum, .cv-container {
-        width: 100%;  /* Contenedor ajustado al 100% del ancho */
-        max-width: 300px; /* Limita el tamaño máximo */
+        width: 100%;
+        max-width: 300px;
         padding: 15px;
     }
 
-    /* Ajuste del texto de contacto en pantallas muy pequeñas */
     .contacto p {
-        font-size: 12px; /* Reducir más el tamaño de la fuente */
-        margin: 5px 8px; /* Ajustar el margen */
+        font-size: 12px;
+        margin: 5px 8px;
     }
 
     .contacto a {
-        font-size: 14px; /* Reducir más el tamaño de fuente */
+        font-size: 14px;
     }
     @media (max-width: 768px) {
         .habilidades-container img {
-            width: 60px; /* Ajusta el tamaño de los iconos en tabletas */
-            margin: 10px; /* Espacio adicional para tabletas */
+            width: 60px;
+            margin: 10px;
         }
     }
     
     /* Ajuste para móviles */
     @media (max-width: 480px) {
         .habilidades-container img {
-            width: 50px; /* Ajusta el tamaño de los iconos en móviles */
-            margin: 5px; /* Menos espacio en móviles */
+            width: 50px;
+            margin: 5px;
         }
     }
+    /* Ajuste para tabletas y móviles */
+@media (max-width: 1024px) {
+    header {
+        background-size: contain; /* Para asegurarse de que la imagen completa se muestre */
+        background-position: center center;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background-size: cover; /* Mantiene la imagen adaptada a la pantalla */
+        background-position: center;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        background-size: cover; /* Mantiene la imagen adaptada a la pantalla */
+        background-position: center;
+        height: 100vh;
+    }
+}
 }
