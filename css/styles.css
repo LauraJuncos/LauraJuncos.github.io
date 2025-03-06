@@ -522,6 +522,20 @@ p {
     .contacto a {
         font-size: 16px;
     }
+
+    /* Ajuste de la imagen en la sección habilidades */
+    .habilidades-container img {
+        width: 60px;
+        margin: 10px;
+    }
+
+    /* Ajuste del header en dispositivos móviles y tabletas */
+    header {
+        background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
 }
 
 @media (max-width: 480px) {
@@ -554,21 +568,23 @@ p {
     .contacto a {
         font-size: 14px;
     }
-    @media (max-width: 768px) {
-        .habilidades-container img {
-            width: 60px;
-            margin: 10px;
-        }
+
+    /* Ajuste para móviles de la imagen de habilidades */
+    .habilidades-container img {
+        width: 50px;
+        margin: 5px;
     }
-    
-    /* Ajuste para móviles */
-    @media (max-width: 480px) {
-        .habilidades-container img {
-            width: 50px;
-            margin: 5px;
-        }
+
+    /* Ajuste del header en dispositivos móviles */
+    header {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
     }
-    /* Ajuste para tabletas y móviles */
+}
+
+/* Para dispositivos de tabletas y pantallas más grandes */
 @media (max-width: 1024px) {
     header {
         background-size: cover;
@@ -576,6 +592,7 @@ p {
     }
 }
 
+/* Para dispositivos de hasta 768px de ancho */
 @media (max-width: 768px) {
     header {
         background-size: contain;
@@ -585,6 +602,7 @@ p {
     }
 }
 
+/* Para dispositivos móviles específicamente */
 @media (max-width: 480px) {
     header {
         background-size: contain;
@@ -592,13 +610,4 @@ p {
         background-repeat: no-repeat;
         height: 100vh;
     }
-}
-/* Para dispositivos móviles, usamos una imagen diferente */
-@media (max-width: 768px) {
-    header {
-        background: url('/img/Lauramoviles.png') no-repeat center center;
-        background-size: cover;
-        background-position: center;
-    }
-}
 }
