@@ -540,6 +540,13 @@ p {
 
 /* Para dispositivos móviles específicamente */
 @media (max-width: 480px) {
+    .inicio p {
+        text-align: center;
+        color: white; /* Ajusta el color del texto si es necesario */
+        font-size: 18px; /* Ajusta el tamaño de la fuente si es necesario */
+        margin: 0 auto; /* Asegura que no haya márgenes extra */
+    }
+    
     header {
         background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
         background-size: cover; /* La imagen ocupará toda la pantalla */
