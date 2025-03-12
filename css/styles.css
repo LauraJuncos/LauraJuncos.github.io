@@ -480,21 +480,21 @@ p {
         align-items: center;
         text-align: center;
     }
-    .carrusel-container, .texto, .habilidades-container, .nav-menu, .proyecto, .tutorial {
+    .carrusel-container, .texto, .habilidades-container, .proyecto, .tutorial, .cv-container {
         width: 100%;
-        max-width: 350px;
+        max-width: 400px;
         padding: 20px;
         margin: 10px auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         text-align: center;
     }
 
     .habilidades-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
+    }
+
+    .nav-menu {
+        width: 100%;
     }
 
     .descargar-btn, .github-link, .tutorial-link, .readme-link, .descargar-btn-lila {
@@ -505,26 +505,7 @@ p {
         margin: 10px auto;
     }
 
-    /* Ajuste de contenedores en pantallas pequeñas */
-    #curriculum, .cv-container {
-        width: 100%;
-        max-width: 350px;
-        padding: 20px;
-        margin: 10px auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
     /* Ajuste del texto de contacto */
-    .contacto {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
     .contacto p {
         font-size: 14px;
         margin: 5px 10px;
@@ -544,6 +525,7 @@ p {
     header {
         background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
         background-size: cover;
+        background-position: center;
         height: 100vh;
     }
 }
@@ -564,14 +546,34 @@ p {
         max-width: 600px;
     }
 
+    #inicio h1, #inicio p {
+        margin: 0;
+        padding: 0;
+    }
+
+    #inicio p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
     header {
         background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         height: 100vh;
+        margin: 0;
+        padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    header .texto {
+        color: white;
+        font-size: 24px;
+        margin: 0;
     }
 
     .habilidades-container img {
@@ -595,13 +597,17 @@ p {
     }
 
     #curriculum, .cv-container {
-        width: 100%;
-        max-width: 300px;
-        padding: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 90%;
+        max-width: 400px;
+        padding: 20px;
+        margin: 20px auto;
+        background: #000;
+        color: #fff;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .contacto p {
@@ -611,13 +617,5 @@ p {
 
     .contacto a {
         font-size: 14px;
-    }
-}
-
-/* Para dispositivos de hasta 1024px de ancho */
-@media (max-width: 1024px) {
-    header {
-        background-size: cover;
-        background-position: center center;
     }
 }
