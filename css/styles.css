@@ -480,15 +480,26 @@ p {
         align-items: center;
         text-align: center;
     }
-    .carrusel-container, .texto, .habilidades-container, .proyecto, .tutorial, .cv-container {
+
+    /* Contenedores principales */
+    .carrusel-container,
+    .texto,
+    .habilidades-container,
+    .proyecto,
+    .tutorial,
+    .cv-container {
         width: 100%;
         max-width: 400px;
         padding: 20px;
         margin: 10px auto;
         text-align: center;
+        /* Para forzar que se vean en columna y centrados */
+        display: block;
     }
 
+    /* Habilidades en 2 columnas en tablet */
     .habilidades-container {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
     }
@@ -497,12 +508,19 @@ p {
         width: 100%;
     }
 
-    .descargar-btn, .github-link, .tutorial-link, .readme-link, .descargar-btn-lila {
+    /* Botones centrados y con ancho máximo */
+    .descargar-btn,
+    .github-link,
+    .tutorial-link,
+    .readme-link,
+    .descargar-btn-lila {
+        display: block;
         width: 100%;
         max-width: 280px;
         padding: 12px 20px;
         font-size: 16px;
         margin: 10px auto;
+        text-align: center;
     }
 
     /* Ajuste del texto de contacto */
@@ -546,7 +564,8 @@ p {
         max-width: 600px;
     }
 
-    #inicio h1, #inicio p {
+    #inicio h1,
+    #inicio p {
         margin: 0;
         padding: 0;
     }
@@ -576,27 +595,38 @@ p {
         margin: 0;
     }
 
+    /* Habilidades en 1 columna en móvil */
+    .habilidades-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .habilidades-container img {
         width: 50px;
         margin: 5px;
-    }
-
-    .habilidades-container {
-        grid-template-columns: repeat(1, 1fr);
     }
 
     .menu-toggle {
         font-size: 24px;
     }
 
-    .descargar-btn, .github-link, .tutorial-link, .readme-link, .descargar-btn-lila {
+    /* Botones un poco más pequeños en móvil */
+    .descargar-btn,
+    .github-link,
+    .tutorial-link,
+    .readme-link,
+    .descargar-btn-lila {
+        display: block;
         padding: 8px 12px;
         font-size: 14px;
         max-width: 100%;
         width: auto;
+        margin: 8px auto;
+        text-align: center;
     }
 
-    #curriculum, .cv-container {
+    /* Sección del Curriculum centrada y adaptada */
+    #curriculum,
+    .cv-container {
         width: 90%;
         max-width: 400px;
         padding: 20px;
@@ -616,6 +646,6 @@ p {
     }
 
     .contacto a {
-        font-size: 14px;
-    }
+        font-size: 14px;
+    }
 }
