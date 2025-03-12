@@ -473,8 +473,25 @@ p {
     margin-right: 8px;
 }
 
-/* Media Queries para Responsividad */
+/* --- Ajustes generales --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: sans-serif; /* o la que uses */
+}
+
+/* Contenedor global para secciones (opcional, si lo deseas) */
+.contenedor-seccion {
+    width: 100%;
+    max-width: 1200px; /* Ajusta según tu gusto */
+    margin: 0 auto;    /* Centra la sección en pantallas grandes */
+    padding: 20px;
+}
+
+/* --- Media Query para tablets y pantallas <= 768px --- */
 @media (max-width: 768px) {
+    /* Asegura que la columna de inicio esté centrada */
     .contenido-inicio {
         flex-direction: column;
         align-items: center;
@@ -489,21 +506,23 @@ p {
     .tutorial,
     .cv-container {
         width: 100%;
-        max-width: 400px;
+        max-width: 400px;  /* Ajusta el ancho máximo */
         padding: 20px;
-        margin: 10px auto;
+        margin: 20px auto; /* Centra el bloque */
         text-align: center;
-        /* Para forzar que se vean en columna y centrados */
         display: block;
     }
 
-    /* Habilidades en 2 columnas en tablet */
+    /* Grid de habilidades en 2 columnas en tablet */
     .habilidades-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
+        gap: 20px;
+        justify-items: center; /* Centra los ítems en cada columna */
+        align-items: center;   /* Centra verticalmente los ítems */
     }
 
+    /* Menú */
     .nav-menu {
         width: 100%;
     }
@@ -519,7 +538,7 @@ p {
         max-width: 280px;
         padding: 12px 20px;
         font-size: 16px;
-        margin: 10px auto;
+        margin: 10px auto; /* Centra cada botón */
         text-align: center;
     }
 
@@ -528,7 +547,6 @@ p {
         font-size: 14px;
         margin: 5px 10px;
     }
-
     .contacto a {
         font-size: 16px;
     }
@@ -539,17 +557,21 @@ p {
         margin: 10px;
     }
 
-    /* Ajuste del header en dispositivos móviles y tabletas */
+    /* Header en dispositivos <= 768px */
     header {
         background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
         background-size: cover;
         background-position: center;
         height: 100vh;
+        margin: 0;
+        padding: 0;
     }
 }
 
-/* Para dispositivos móviles específicamente */
+/* --- Media Query para móviles <= 480px --- */
 @media (max-width: 480px) {
+
+    /* Contenido de la sección inicio */
     #inicio .contenido {
         display: flex;
         flex-direction: column;
@@ -562,6 +584,7 @@ p {
     #inicio .texto {
         width: 90%;
         max-width: 600px;
+        margin: 0 auto;
     }
 
     #inicio h1,
@@ -569,12 +592,12 @@ p {
         margin: 0;
         padding: 0;
     }
-
     #inicio p {
         font-size: 16px;
         line-height: 1.5;
     }
 
+    /* Header en móviles */
     header {
         background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
         background-size: cover;
@@ -588,7 +611,6 @@ p {
         align-items: center;
         text-align: center;
     }
-
     header .texto {
         color: white;
         font-size: 24px;
@@ -598,18 +620,21 @@ p {
     /* Habilidades en 1 columna en móvil */
     .habilidades-container {
         grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
     }
-
     .habilidades-container img {
         width: 50px;
         margin: 5px;
     }
 
+    /* Menú toggle */
     .menu-toggle {
         font-size: 24px;
     }
 
-    /* Botones un poco más pequeños en móvil */
+    /* Botones más pequeños en móvil */
     .descargar-btn,
     .github-link,
     .tutorial-link,
@@ -624,7 +649,7 @@ p {
         text-align: center;
     }
 
-    /* Sección del Curriculum centrada y adaptada */
+    /* Sección de Curriculum centrada y adaptada */
     #curriculum,
     .cv-container {
         width: 90%;
@@ -640,11 +665,11 @@ p {
         justify-content: center;
     }
 
+    /* Contacto */
     .contacto p {
         font-size: 12px;
         margin: 5px 8px;
     }
-
     .contacto a {
         font-size: 14px;
     }
