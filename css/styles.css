@@ -480,21 +480,21 @@ p {
         align-items: center;
         text-align: center;
     }
-    .carrusel-container, .texto {
+    .carrusel-container, .texto, .habilidades-container, .nav-menu, .proyecto, .tutorial {
         width: 100%;
+        max-width: 350px;
+        padding: 20px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .habilidades-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
-    }
-
-    .nav-menu {
-        width: 100%;
-    }
-
-    .proyecto, .tutorial {
-        width: 90%;
     }
 
     .descargar-btn, .github-link, .tutorial-link, .readme-link, .descargar-btn-lila {
@@ -511,9 +511,20 @@ p {
         max-width: 350px;
         padding: 20px;
         margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     /* Ajuste del texto de contacto */
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .contacto p {
         font-size: 14px;
         margin: 5px 10px;
@@ -533,7 +544,6 @@ p {
     header {
         background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
         background-size: cover;
-        background-position: center;
         height: 100vh;
     }
 }
@@ -542,56 +552,33 @@ p {
 @media (max-width: 480px) {
     #inicio .contenido {
         display: flex;
-        flex-direction: column; /* Apila los elementos en columna */
-        justify-content: center; /* Centra verticalmente */
-        align-items: center; /* Centra horizontalmente */
-        text-align: center; /* Alinea el texto al centro */
-        width: 100%; /* Asegura que ocupe el 100% del ancho */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
     }
 
     #inicio .texto {
-        width: 90%; /* Ajusta el ancho de la sección de texto para no ocupar todo el espacio */
-        max-width: 600px; /* Establece un máximo de ancho para que no se estire demasiado */
-    }
-
-    #inicio h1, #inicio p {
-        margin: 0; /* Elimina márgenes no deseados */
-        padding: 0; /* Elimina el padding extra */
-    }
-
-    #inicio p {
-        font-size: 16px; /* Ajusta el tamaño de la fuente */
-        line-height: 1.5; /* Mejora la legibilidad */
+        width: 90%;
+        max-width: 600px;
     }
 
     header {
         background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
-        background-size: cover; /* La imagen ocupará toda la pantalla */
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
-        margin: 0; /* Eliminar márgenes */
-        padding: 0; /* Eliminar padding */
+        background-size: cover;
+        height: 100vh;
         display: flex;
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
-        text-align: center; /* Alinea el texto en el centro */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
-    /* Si tienes un contenedor específico de texto dentro del header */
-    header .texto {
-        color: white; /* Puedes ajustar el color del texto */
-        font-size: 24px; /* Ajusta el tamaño de la fuente según sea necesario */
-        margin: 0; /* Elimina márgenes extra si los hay */
-    }
-
-    /* Ajuste de imagen en habilidades para móviles */
     .habilidades-container img {
         width: 50px;
         margin: 5px;
     }
 
-    /* Otros ajustes para móviles */
     .habilidades-container {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -611,6 +598,10 @@ p {
         width: 100%;
         max-width: 300px;
         padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .contacto p {
@@ -620,18 +611,6 @@ p {
 
     .contacto a {
         font-size: 14px;
-    }
-}
-
-
-/* Para dispositivos de hasta 768px de ancho */
-@media (max-width: 768px) {
-    header {
-        background: url('/img/Lauramoviles.png?v=2') no-repeat center center;
-        background-size: cover; /* Imagen cubriendo toda la pantalla */
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
     }
 }
 
