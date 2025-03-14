@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperPrint xmlns="http://jasperreports.sourceforge.net/jasperreports/print" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/print http://jasperreports.sourceforge.net/xsd/jasperprint.xsd" name="report1" pageWidth="595" pageHeight="842" topMargin="20" leftMargin="20" bottomMargin="20" rightMargin="20" locale="es_ES" timezone="Europe/Madrid">
+	<property name="net.sf.jasperreports.export.xml.start.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.end.page.index" value="0"/>
+	<property name="net.sf.jasperreports.export.xml.page.count" value="1"/>
+	<origin band="background"/>
+	<origin band="title"/>
+	<origin band="pageHeader"/>
+	<origin band="columnHeader"/>
+	<origin band="detail"/>
+	<origin band="columnFooter"/>
+	<origin band="pageFooter"/>
+	<origin band="summary"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row|1" mode="Opaque" backcolor="#F0EFEF" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<page>
+		<frame>
+			<reportElement uuid="2a4f078a-5df6-4f6a-b1f4-609ac79e0756" mode="Opaque" x="20" y="20" width="555" height="95" backcolor="#000000" origin="1" srcId="1" printId="1"/>
+			<text textHeight="33.347168" lineSpacingFactor="1.1499023" leadingOffset="-6.272949">
+				<reportElement uuid="9e99329c-8434-4eb4-bf43-03c5c6925482" style="Title" x="62" y="18" width="451" height="48" origin="1" srcId="2" printId="1"/>
+				<font size="29" isBold="true"/>
+				<textContent><![CDATA[Alumnos que participan en FPDual]]></textContent>
+			</text>
+			<text textHeight="22.998047" lineSpacingFactor="1.1499023" leadingOffset="-4.326172">
+				<reportElement uuid="fe33cec2-b4de-4b4e-b2ad-44b1f19101b5" style="SubTitle" x="2" y="66" width="249" height="29" origin="1" srcId="3" printId="1"/>
+				<font size="20" isBold="false"/>
+				<textContent><![CDATA[Participantes:]]></textContent>
+			</text>
+		</frame>
+		<frame>
+			<reportElement uuid="7af8314b-af19-42a2-a1af-eeca83a98d96" mode="Opaque" x="20" y="120" width="555" height="32" forecolor="#000000" backcolor="#CC0000" origin="1" srcId="4" printId="1"/>
+			<text textAlignment="Right" textHeight="15.09375" lineSpacingFactor="1.2578125" leadingOffset="-2.6367188" valueClass="java.util.Date" pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="de900572-02be-4249-9f23-1a83c857b3c3" x="406" y="12" width="144" height="20" forecolor="#FFFFFF" origin="1" srcId="5" printId="1"/>
+				<font size="12"/>
+				<textContent><![CDATA[martes 11 febrero 2025]]></textContent>
+			</text>
+		</frame>
+		<text textAlignment="Center" verticalAlignment="Top" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+			<reportElement uuid="01228d4d-e485-4611-839e-bc06956d378a" style="Column header" x="20" y="159" width="111" height="18" forecolor="#000000" origin="3" srcId="6" printId="1"/>
+			<font isBold="true"/>
+			<textContent><![CDATA[ID]]></textContent>
+		</text>
+		<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+			<reportElement uuid="9262218e-8f39-4934-adc7-3a8ea04d257c" style="Column header" x="131" y="159" width="152" height="18" forecolor="#000000" origin="3" srcId="7" printId="1"/>
+			<font isBold="true"/>
+			<textContent><![CDATA[Nombre]]></textContent>
+		</text>
+		<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+			<reportElement uuid="4248e055-fa00-42df-8fb8-5b432ba5fcff" style="Column header" x="283" y="160" width="121" height="18" forecolor="#000000" origin="3" srcId="8" printId="1"/>
+			<font isBold="true"/>
+			<textContent><![CDATA[DNI]]></textContent>
+		</text>
+		<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+			<reportElement uuid="046c2048-440c-473f-9f16-26b4d0c2713f" style="Column header" x="404" y="160" width="90" height="18" forecolor="#000000" origin="3" srcId="9" printId="1"/>
+			<font isBold="true"/>
+			<textContent><![CDATA[Ciclo]]></textContent>
+		</text>
+		<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+			<reportElement uuid="a7028404-644d-4e6a-b11f-8e67161cdb47" style="Column header" x="494" y="159" width="81" height="18" forecolor="#000000" origin="3" srcId="10" printId="1"/>
+			<font isBold="true"/>
+			<textContent><![CDATA[Curso]]></textContent>
+		</text>
+		<frame>
+			<reportElement uuid="1ce5e972-0d33-42d6-8b54-41b2d62dfdd4" style="Row" mode="Opaque" x="20" y="178" width="555" height="18" origin="4" srcId="11" printId="1"/>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="84111b3c-6369-40aa-839c-2b1df3491ba2" style="Detail" x="0" y="0" width="111" height="18" origin="4" srcId="12" printId="1"/>
+				<font size="14"/>
+				<textContent><![CDATA[14]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="f25fc912-7788-4bac-a26f-cbbc0ec504b5" style="Detail" x="111" y="0" width="152" height="18" origin="4" srcId="13" printId="1"/>
+				<font size="14"/>
+				<textContent><![CDATA[Laura García]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="c7fe5523-fc14-4266-a478-41766f1ce11e" style="Detail" x="384" y="0" width="90" height="18" origin="4" srcId="14" printId="1"/>
+				<font size="14"/>
+				<textContent><![CDATA[CFGB]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="c068f666-682f-4390-a311-b7ae20ca22ff" style="Detail" x="474" y="0" width="81" height="18" origin="4" srcId="15" printId="1"/>
+				<font size="14"/>
+				<textContent><![CDATA[2]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="2f9b9af0-147e-4f2d-a7a8-09264334d7d8" style="Detail" x="263" y="0" width="121" height="18" origin="4" srcId="16" printId="1"/>
+				<font size="14"/>
+				<textContent><![CDATA[12345678A]]></textContent>
+			</text>
+		</frame>
+		<frame>
+			<reportElement uuid="1ce5e972-0d33-42d6-8b54-41b2d62dfdd4" style="Row|1" mode="Opaque" x="20" y="196" width="555" height="18" origin="4" srcId="11" printId="2"/>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="84111b3c-6369-40aa-839c-2b1df3491ba2" style="Detail" x="0" y="0" width="111" height="18" origin="4" srcId="12" printId="2"/>
+				<font size="14"/>
+				<textContent><![CDATA[17]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="f25fc912-7788-4bac-a26f-cbbc0ec504b5" style="Detail" x="111" y="0" width="152" height="18" origin="4" srcId="13" printId="2"/>
+				<font size="14"/>
+				<textContent><![CDATA[Javier Ruiz]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="c7fe5523-fc14-4266-a478-41766f1ce11e" style="Detail" x="384" y="0" width="90" height="18" origin="4" srcId="14" printId="2"/>
+				<font size="14"/>
+				<textContent><![CDATA[SMR]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="c068f666-682f-4390-a311-b7ae20ca22ff" style="Detail" x="474" y="0" width="81" height="18" origin="4" srcId="15" printId="2"/>
+				<font size="14"/>
+				<textContent><![CDATA[2]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="2f9b9af0-147e-4f2d-a7a8-09264334d7d8" style="Detail" x="263" y="0" width="121" height="18" origin="4" srcId="16" printId="2"/>
+				<font size="14"/>
+				<textContent><![CDATA[45678901D]]></textContent>
+			</text>
+		</frame>
+		<frame>
+			<reportElement uuid="1ce5e972-0d33-42d6-8b54-41b2d62dfdd4" style="Row" mode="Opaque" x="20" y="214" width="555" height="18" origin="4" srcId="11" printId="3"/>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="84111b3c-6369-40aa-839c-2b1df3491ba2" style="Detail" x="0" y="0" width="111" height="18" origin="4" srcId="12" printId="3"/>
+				<font size="14"/>
+				<textContent><![CDATA[18]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="f25fc912-7788-4bac-a26f-cbbc0ec504b5" style="Detail" x="111" y="0" width="152" height="18" origin="4" srcId="13" printId="3"/>
+				<font size="14"/>
+				<textContent><![CDATA[Beatriz Sánchez]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="c7fe5523-fc14-4266-a478-41766f1ce11e" style="Detail" x="384" y="0" width="90" height="18" origin="4" srcId="14" printId="3"/>
+				<font size="14"/>
+				<textContent><![CDATA[DAM]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="c068f666-682f-4390-a311-b7ae20ca22ff" style="Detail" x="474" y="0" width="81" height="18" origin="4" srcId="15" printId="3"/>
+				<font size="14"/>
+				<textContent><![CDATA[2]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="2f9b9af0-147e-4f2d-a7a8-09264334d7d8" style="Detail" x="263" y="0" width="121" height="18" origin="4" srcId="16" printId="3"/>
+				<font size="14"/>
+				<textContent><![CDATA[56789012E]]></textContent>
+			</text>
+		</frame>
+		<frame>
+			<reportElement uuid="1ce5e972-0d33-42d6-8b54-41b2d62dfdd4" style="Row|1" mode="Opaque" x="20" y="232" width="555" height="18" origin="4" srcId="11" printId="4"/>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="84111b3c-6369-40aa-839c-2b1df3491ba2" style="Detail" x="0" y="0" width="111" height="18" origin="4" srcId="12" printId="4"/>
+				<font size="14"/>
+				<textContent><![CDATA[19]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="f25fc912-7788-4bac-a26f-cbbc0ec504b5" style="Detail" x="111" y="0" width="152" height="18" origin="4" srcId="13" printId="4"/>
+				<font size="14"/>
+				<textContent><![CDATA[David Fernández]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="c7fe5523-fc14-4266-a478-41766f1ce11e" style="Detail" x="384" y="0" width="90" height="18" origin="4" srcId="14" printId="4"/>
+				<font size="14"/>
+				<textContent><![CDATA[DAM]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="c068f666-682f-4390-a311-b7ae20ca22ff" style="Detail" x="474" y="0" width="81" height="18" origin="4" srcId="15" printId="4"/>
+				<font size="14"/>
+				<textContent><![CDATA[2]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="2f9b9af0-147e-4f2d-a7a8-09264334d7d8" style="Detail" x="263" y="0" width="121" height="18" origin="4" srcId="16" printId="4"/>
+				<font size="14"/>
+				<textContent><![CDATA[67890123F]]></textContent>
+			</text>
+		</frame>
+		<frame>
+			<reportElement uuid="1ce5e972-0d33-42d6-8b54-41b2d62dfdd4" style="Row" mode="Opaque" x="20" y="250" width="555" height="18" origin="4" srcId="11" printId="5"/>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="84111b3c-6369-40aa-839c-2b1df3491ba2" style="Detail" x="0" y="0" width="111" height="18" origin="4" srcId="12" printId="5"/>
+				<font size="14"/>
+				<textContent><![CDATA[21]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="f25fc912-7788-4bac-a26f-cbbc0ec504b5" style="Detail" x="111" y="0" width="152" height="18" origin="4" srcId="13" printId="5"/>
+				<font size="14"/>
+				<textContent><![CDATA[Sergio Martín]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="c7fe5523-fc14-4266-a478-41766f1ce11e" style="Detail" x="384" y="0" width="90" height="18" origin="4" srcId="14" printId="5"/>
+				<font size="14"/>
+				<textContent><![CDATA[CFGB]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="c068f666-682f-4390-a311-b7ae20ca22ff" style="Detail" x="474" y="0" width="81" height="18" origin="4" srcId="15" printId="5"/>
+				<font size="14"/>
+				<textContent><![CDATA[2]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="2f9b9af0-147e-4f2d-a7a8-09264334d7d8" style="Detail" x="263" y="0" width="121" height="18" origin="4" srcId="16" printId="5"/>
+				<font size="14"/>
+				<textContent><![CDATA[89012345H]]></textContent>
+			</text>
+		</frame>
+		<frame>
+			<reportElement uuid="1ce5e972-0d33-42d6-8b54-41b2d62dfdd4" style="Row|1" mode="Opaque" x="20" y="268" width="555" height="18" origin="4" srcId="11" printId="6"/>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="84111b3c-6369-40aa-839c-2b1df3491ba2" style="Detail" x="0" y="0" width="111" height="18" origin="4" srcId="12" printId="6"/>
+				<font size="14"/>
+				<textContent><![CDATA[22]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="f25fc912-7788-4bac-a26f-cbbc0ec504b5" style="Detail" x="111" y="0" width="152" height="18" origin="4" srcId="13" printId="6"/>
+				<font size="14"/>
+				<textContent><![CDATA[Isabel Gómez]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="c7fe5523-fc14-4266-a478-41766f1ce11e" style="Detail" x="384" y="0" width="90" height="18" origin="4" srcId="14" printId="6"/>
+				<font size="14"/>
+				<textContent><![CDATA[DAM]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="c068f666-682f-4390-a311-b7ae20ca22ff" style="Detail" x="474" y="0" width="81" height="18" origin="4" srcId="15" printId="6"/>
+				<font size="14"/>
+				<textContent><![CDATA[2]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="2f9b9af0-147e-4f2d-a7a8-09264334d7d8" style="Detail" x="263" y="0" width="121" height="18" origin="4" srcId="16" printId="6"/>
+				<font size="14"/>
+				<textContent><![CDATA[90123456I]]></textContent>
+			</text>
+		</frame>
+		<frame>
+			<reportElement uuid="1ce5e972-0d33-42d6-8b54-41b2d62dfdd4" style="Row" mode="Opaque" x="20" y="286" width="555" height="18" origin="4" srcId="11" printId="7"/>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="84111b3c-6369-40aa-839c-2b1df3491ba2" style="Detail" x="0" y="0" width="111" height="18" origin="4" srcId="12" printId="7"/>
+				<font size="14"/>
+				<textContent><![CDATA[24]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="f25fc912-7788-4bac-a26f-cbbc0ec504b5" style="Detail" x="111" y="0" width="152" height="18" origin="4" srcId="13" printId="7"/>
+				<font size="14"/>
+				<textContent><![CDATA[Laura López]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="c7fe5523-fc14-4266-a478-41766f1ce11e" style="Detail" x="384" y="0" width="90" height="18" origin="4" srcId="14" printId="7"/>
+				<font size="14"/>
+				<textContent><![CDATA[DAM]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203" valueClass="java.lang.Integer">
+				<reportElement uuid="c068f666-682f-4390-a311-b7ae20ca22ff" style="Detail" x="474" y="0" width="81" height="18" origin="4" srcId="15" printId="7"/>
+				<font size="14"/>
+				<textContent><![CDATA[2]]></textContent>
+			</text>
+			<text textAlignment="Center" textHeight="16.098633" lineSpacingFactor="1.1499023" leadingOffset="-3.0283203">
+				<reportElement uuid="2f9b9af0-147e-4f2d-a7a8-09264334d7d8" style="Detail" x="263" y="0" width="121" height="18" origin="4" srcId="16" printId="7"/>
+				<font size="14"/>
+				<textContent><![CDATA[49429523Q]]></textContent>
+			</text>
+		</frame>
+		<line>
+			<reportElement uuid="305fad42-163a-4cde-8092-020db0624e6f" x="20" y="793" width="555" height="1" origin="5" srcId="17" printId="1"/>
+			<graphicElement>
+				<pen lineWidth="0.5" lineColor="#999999"/>
+			</graphicElement>
+		</line>
+		<frame>
+			<reportElement uuid="f51c3380-7d62-4869-a21d-875153e15e3c" mode="Opaque" x="20" y="798" width="555" height="24" forecolor="#D0B48E" backcolor="#000000" origin="6" srcId="18" printId="1"/>
+			<text verticalAlignment="Middle" textHeight="11.499023" lineSpacingFactor="1.1499023" leadingOffset="-2.163086">
+				<reportElement uuid="c126fae1-ac2e-42df-9fb6-e64d89393209" style="Column header" x="513" y="0" width="40" height="20" forecolor="#FFFFFF" origin="6" srcId="19" printId="1"/>
+				<font size="10" isBold="false"/>
+				<textContent><![CDATA[ 1]]></textContent>
+			</text>
+			<text textAlignment="Right" verticalAlignment="Middle" textHeight="11.499023" lineSpacingFactor="1.1499023" leadingOffset="-2.163086">
+				<reportElement uuid="b23f939c-efa8-4655-b7c6-452f3d8ff0d4" style="Column header" x="433" y="0" width="80" height="20" forecolor="#FFFFFF" origin="6" srcId="20" printId="1"/>
+				<font size="10" isBold="false"/>
+				<textContent><![CDATA[Page 1 of]]></textContent>
+			</text>
+			<text verticalAlignment="Middle" textHeight="11.499023" lineSpacingFactor="1.1499023" leadingOffset="-2.163086" valueClass="java.util.Date" pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="26000899-efed-44c2-85b8-4c16460bc857" style="Column header" x="2" y="1" width="197" height="20" forecolor="#FFFFFF" origin="6" srcId="21" printId="1"/>
+				<font size="10" isBold="false"/>
+				<textContent><![CDATA[martes 11 febrero 2025]]></textContent>
+			</text>
+		</frame>
+	</page>
+</jasperPrint>
