@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 23 ene 2025, 10:53:15 by Hibernate Tools 6.3.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="dgc" name="hibernate.Proyecto_dgc.Informe" optimistic-lock="none" table="informe">
+        <id name="idInforme" type="java.lang.Integer">
+            <column name="Id_Informe"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="hibernate.Proyecto_dgc.Proyecto" fetch="select" name="proyecto">
+            <column name="Id_Proyecto" not-null="true"/>
+        </many-to-one>
+        <property name="fechaCreacion" type="date">
+            <column length="10" name="Fecha_Creacion" not-null="true"/>
+        </property>
+        <property name="autor" type="string">
+            <column length="100" name="Autor" not-null="true"/>
+        </property>
+        <property name="contenido" type="string">
+            <column length="65535" name="Contenido" not-null="true"/>
+        </property>
+        <property name="estado" type="string">
+            <column length="9" name="Estado" not-null="true"/>
+        </property>
+        <property name="tipoInforme" type="string">
+            <column length="50" name="Tipo_Informe" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

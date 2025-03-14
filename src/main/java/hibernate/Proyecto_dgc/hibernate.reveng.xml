@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="dgc" match-name="alegacion"/>
+  <table-filter match-catalog="dgc" match-name="favoritos"/>
+  <table-filter match-catalog="dgc" match-name="informe"/>
+  <table-filter match-catalog="dgc" match-name="notificaciones"/>
+  <table-filter match-catalog="dgc" match-name="proyecto"/>
+  <table-filter match-catalog="dgc" match-name="usuario"/>
+</hibernate-reverse-engineering>
